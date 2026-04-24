@@ -1,3 +1,5 @@
+# Desafio para Tech Lead - Smart Online
+
 ## Contexto
 
 Você está trabalhando em um sistema que recebe webhooks de pagamento de um provedor externo.
@@ -9,7 +11,7 @@ Esse tipo de integração possui dois problemas comuns:
 - O provedor pode enviar o mesmo webhook mais de uma vez;
 - O processamento pode falhar temporariamente.
 
-Você recebeu o código abaixo durante um code review de um dev do seu time.
+Você recebeu o código (Program.cs) durante um code review de um dev do seu time.
 
 ## O que fazer
 
@@ -22,6 +24,10 @@ Analise o código e responda:
     - **curto prazo** (o que corrigir agora)
     - **médio prazo** (como evoluir a solução)
 - Quais trade-offs você considerou nas suas recomendações?
+- **Considere obrigatoriamente** os seguintes cenários na análise:
+  - Múltiplas instâncias do serviço rodando em paralelo;
+  - Indisponibilidade temporária do provedor externo;
+  - Volume alto de eventos.
 
 ## Regras
 
@@ -33,13 +39,12 @@ Analise o código e responda:
 
 ## Diferencial (opcional)
 
-- Considerar cenários com múltiplas instâncias do serviço;
-- Considerar indisponibilidade do provedor externo;
-- Considerar volume alto de eventos.
+- Como você mediria em produção que a solução está funcionando? (métricas, alarmes, SLOs, o que observar).
 
 ## Entrega
 
-- Resposta em texto (formato livre)
+- Resposta em texto, formato livre, mas com seções claras (ex: problemas identificados / curto prazo / médio prazo / trade-offs / cenários obrigatórios).
+- Pode ser rascunho, vamos discutir junto na entrevista.
 
 ## O que avaliamos
 
